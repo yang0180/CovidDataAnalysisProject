@@ -1,0 +1,106 @@
+﻿@model Assignment2.Models.CovidCase
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>CovidCase</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Pruid)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Pruid)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Prname)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Prname)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PrnameFR)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PrnameFR)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Date)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Date)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Numconf)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Numconf)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Numprob)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Numprob)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Numdeath)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Numdeath)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Numtotal)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Numtotal)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Numtoday)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Numtoday)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Ratetotal)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Ratetotal)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

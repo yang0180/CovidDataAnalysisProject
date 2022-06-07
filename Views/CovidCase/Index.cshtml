@@ -1,0 +1,109 @@
+﻿@model IEnumerable<Assignment2.Models.CovidCase>
+<br/>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<p>
+    @Html.ActionLink("Reload", "Reload")
+</p>
+<p>
+
+    @using (Html.BeginForm("Index", "CovidCase", FormMethod.Get))
+    {
+
+        <b>Search By: </b> @Html.RadioButton("searchBy", "Name", true)<text> Name </text>
+        @Html.RadioButton("searchBy", "NameFr")<text> NameFr </text>
+        @Html.RadioButton("searchBy", "Date")<text> Date </text>
+        <br />
+        @Html.TextBox("search",null, new { required = "required" }) <input type="submit" value="Search" />
+
+    }
+
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pruid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrnameFR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numconf)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numprob)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numdeath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numtotal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numtoday)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ratetotal)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pruid)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Prname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrnameFR)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Numconf)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Numprob)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Numdeath)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Numtotal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Numtoday)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ratetotal)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @using (Html.BeginForm("Delete", "CovidCase", new { id = item.Id }, FormMethod.Post))
+                    {
+                        <input type="submit" value="Delete" class="btn btn-default" 
+                               onclick="return confirm('Are you sure you want to delete record with ID = @item.Id');"/>
+                    }
+                </td>
+            </tr>
+    }
+
+</table>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Assignment2.Controllers.CovidCaseController">
+    <Position X="1" Y="1.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAABAAAAAAAAQAAAAAEAAEACCAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\CovidCaseController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assignment2.Models.MockCovidCaseRepository">
+    <Position X="6.5" Y="4" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAAAEAAAAAAAAEAAAAACgAAAQAAACA=</HashCode>
+      <FileName>Models\MockCovidCaseRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="2.051" />
+  </Class>
+  <Interface Name="Assignment2.Models.ICovidCaseRepository">
+    <Position X="7" Y="0.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAAAAAAAAAAAAEAAAAACgAAAAAAACA=</HashCode>
+      <FileName>Models\ICovidCaseRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
